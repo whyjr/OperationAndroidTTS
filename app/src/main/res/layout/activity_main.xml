@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/test_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="openAudioFile"
+        android:text="播放合成语音"
+        android:textSize="20dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:onClick="saveAudioFile"
+        android:text="保存合成音频"
+        android:textSize="20dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+    <LinearLayout
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/language_Group"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/language_English"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="英文" />
+
+            <RadioButton
+                android:id="@+id/language_Chainese"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中文" />
+
+            <RadioButton
+                android:id="@+id/language_German"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="德语" />
+
+            <RadioButton
+                android:id="@+id/language_French"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="法语" />
+
+            <RadioButton
+                android:id="@+id/language_TaiWan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="台湾话" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_weight="7"
+            android:layout_width="0dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/voice_incre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="increVoice"
+                    android:text="加快语速" />
+
+                <Button
+                    android:id="@+id/voice_decre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="decreVoice"
+                    android:text="减慢语速" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/pitch_incre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="increPitch"
+                    android:text="升高音调" />
+
+                <Button
+                    android:id="@+id/pitch_decre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="decrePitch"
+                    android:text="降低音调" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
